@@ -1,1 +1,1 @@
-export * from 'fp-ts';
+export { applicative } from 'fp-ts';
