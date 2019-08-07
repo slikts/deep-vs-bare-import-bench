@@ -4,6 +4,13 @@ Shows speed differences between importing a module directly vs importing from a 
 
 Deep imports in this benchmark are about twice as fast since they avoid compiling unused modules in TS and parsing unused modules in JS.
 
+```js
+// Deep import
+require('package/module');
+//Bare import
+require('package').module;
+```
+
 ## Running
 
 ```
