@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf *.js",
-    "a": "time tsc a.ts",
-    "b": "time tsc b.ts --lib es2015"
+    "ts-a": "time -p tsc ts/a.ts --noEmit",
+    "ts-b": "time -p tsc ts/b.ts --lib es2015 --noEmit",
+    "bench": "npm run ts-a; npm run ts-b"
   },
   "keywords": [],
   "author": "",
