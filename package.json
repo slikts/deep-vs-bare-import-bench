@@ -4,15 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ts-a": "time -p tsc ts/a.ts --noEmit",
-    "ts-b": "time -p tsc ts/b.ts --lib es2015 --noEmit",
-    "bench": "npm run ts-a; npm run ts-b"
+    "ts:deep": "time -p tsc ts/deep.ts --noEmit",
+    "ts:bare": "time -p tsc ts/bare.ts --lib es2015 --noEmit",
+    "bench:ts": "npm run ts:deep; npm run ts:bare",
+    "js:deep": "time -p node js/deep.js",
+    "js:bare": "time -p node js/bare.js",
+    "bench:js": "npm run js:deep; npm run js:bare"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "fp-ts": "^2.0.4",
+    "lodash": "^4.17.15",
+    "ramda": "^0.26.1",
     "typescript": "^3.5.3"
   }
 }
